@@ -1,0 +1,79 @@
+<script type="text/javascript">
+  RED.nodes.registerType('qwatch-config', {
+    category: 'config',
+    defaults: {
+      name: { value: "" },
+      serveraddress: { value: "" },
+      serverport: { serverport: "" }
+    },
+    label: function () {
+      return this.name || "qwatch-config";
+    },
+    credentials: {
+      loginid: { type: "text" },
+      loginpassword: { type: "password" }
+    }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="qwatch-config">
+
+  <div class="form-row">
+    <label for="node-config-input-name"><i class="icon-tag"></i> Name</label>
+    <input type="text" id="node-config-input-name" placeholder="Name">
+  </div>
+
+  <div class="form-row">
+    <label for="node-config-input-serveraddress"><i class="icon-tag"></i> Server Address</label>
+    <input type="text" id="node-config-input-serveraddress">
+  </div>
+
+  <div class="form-row">
+    <label for="node-config-input-serverport"><i class="icon-tag"></i> Server Port</label>
+    <input type="text" id="node-config-input-serverport">
+  </div>
+
+  <div class="form-row">
+    <label for="node-config-input-loginid"><i class="icon-tag"></i> Login ID</label>
+    <input type="text" id="node-config-input-loginid">
+  </div>
+
+  <div class="form-row">
+    <label for="node-config-input-loginpassword"><i class="icon-tag"></i> Login Password</label>
+    <input type="password" id="node-config-input-loginpassword">
+  </div>
+</script>
+
+<script type="text/javascript">
+  RED.nodes.registerType('qwatch-photo-capture', {
+    category: 'sample',
+    color: '#E9967A',
+    defaults: {
+      name: { value: "" },
+      setting: { value: "", type: "qwatch-config" }
+    },
+    inputs: 1,
+    outputs: 1,
+    icon: "arrow-in.png",
+    label: function () {
+      return this.name || "qwatch photo capture";
+    }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="qwatch-photo-capture">
+
+    <div class="form-row">
+      <label for="node-input-apitoken"><i class="icon-tag"></i> Qwatch Setting</label>
+      <input type="text" id="node-input-setting">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="qwatch-photo-capture">
+    <p>Cred Add Setting</p>
+</script>
