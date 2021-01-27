@@ -45,23 +45,23 @@
 </script>
 
 <script type="text/javascript">
-  RED.nodes.registerType('qwatch-photo-capture', {
+  RED.nodes.registerType('qwatch-snapshot', {
     category: 'sample',
-    color: '#E9967A',
+    color: '#FFCC66',
     defaults: {
       name: { value: "" },
       setting: { value: "", type: "qwatch-config" }
     },
     inputs: 1,
     outputs: 1,
-    icon: "arrow-in.png",
+    icon: "font-awesome/fa-camera",
     label: function () {
-      return this.name || "qwatch photo capture";
+      return this.name || "qwatch snapshot";
     }
   });
 </script>
 
-<script type="text/x-red" data-template-name="qwatch-photo-capture">
+<script type="text/x-red" data-template-name="qwatch-snapshot">
 
     <div class="form-row">
       <label for="node-input-apitoken"><i class="icon-tag"></i> Qwatch Setting</label>
@@ -71,9 +71,9 @@
     <div class="form-row">
         <label for="node-input-name"><i class="icon-tag"></i> Name</label>
         <input type="text" id="node-input-name" placeholder="Name">
-    </div>
+    </div> 
 </script>
 
-<script type="text/x-red" data-help-name="qwatch-photo-capture">
-    <p>Cred Add Setting</p>
+<script type="text/x-red" data-help-name="qwatch-snapshot">
+    <p>Qwatch Photo Snapshot</p>
 </script>

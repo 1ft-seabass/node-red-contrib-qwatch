@@ -1,7 +1,7 @@
 {
   "name": "node-red-contrib-qwatch",
   "version": "0.0.1",
-  "description": "",
+  "description": "The node accessing for IODATA Qwatch network camera API",
   "main": "node-red-qwatch.js",
   "node-red": {
     "nodes": {

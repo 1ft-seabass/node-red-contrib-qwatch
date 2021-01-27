@@ -16,7 +16,7 @@ module.exports = function (RED) {
     }
   });
 
-  function QwatchPhotoCapture(config) {
+  function QwatchShapshot(config) {
     RED.nodes.createNode(this, config);
 
     this.current_setting = RED.nodes.getNode(config.setting);
@@ -43,5 +43,5 @@ module.exports = function (RED) {
       node.send(msg);
     });
   }
-  RED.nodes.registerType("qwatch-photo-capture", QwatchPhotoCapture, {});
+  RED.nodes.registerType("qwatch-snapshot", QwatchShapshot, {});
 }
