@@ -21,7 +21,7 @@ module.exports = function (RED) {
 
     this.current_setting = RED.nodes.getNode(config.setting);
 
-    console.log('this.current_setting',this.current_setting);
+    // console.log('this.current_setting',this.current_setting);
     
     let username = this.current_setting.credentials.loginid;
     let password = this.current_setting.credentials.loginpassword;
