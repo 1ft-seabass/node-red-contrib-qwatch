@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-qwatch",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "The node accessing for IODATA Qwatch network camera API",
   "main": "node-red-qwatch.js",
   "node-red": {
@@ -9,7 +9,6 @@
     }
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "node-red": "node-red -u ../../../node-red_dir -p 18801"
   },
   "repository": {
@@ -18,7 +17,7 @@
   },
   "keywords": [
     "node-red",
-    "Todoist"
+    "qwatch"
   ],
   "author": {
     "name": "Seigo Tanaka",
@@ -31,7 +30,7 @@
   },
   "homepage": "https://github.com/1ft-seabass/node-red-contrib-qwatch#readme",
   "dependencies": {
-    "digest-fetch": "^1.1.5",
-    "node-fetch": "^2.6.1"
+    "digest-fetch": "^2.0.3",
+    "node-fetch": "^2.7.0"
   }
 }

@@ -1,4 +1,4 @@
-const DigestFetch = require('digest-fetch');
+const DigestClient = require('digest-fetch')
 
 module.exports = function (RED) {
 
@@ -30,7 +30,7 @@ module.exports = function (RED) {
     var node = this;
     node.on('input', async function (msg) {
 
-      const client = new DigestFetch(username , password, { algorithm: 'MD5' });
+      const client = new DigestClient(username , password, { algorithm: 'MD5' });
       const url = 'http://' + IPAddress + ':' + httpPort + '/snapshot.jpg';
       const options = {};
       
